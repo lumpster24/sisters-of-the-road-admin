@@ -21,6 +21,7 @@ class SearchPage extends Component {
                 accounts.push({
                     name: account.name,
                     id: account.account_id,
+                    balance: account.balance,
                     lastCredit: account.last_add,
                     lastMeal: account.last_subtract,
                     currentCredit: Number(account.balance)
@@ -65,7 +66,7 @@ class SearchPage extends Component {
                             onClick={() => this.props.switchView('accountpage', account)}
                             key={account.id}>
                             <p> {account.name} </p>
-                            <p> {account.balance} </p>
+                            <p> ${account.balance/100} </p>
                             <p>Last credit: {account.lastCredit}</p>
                             <p>Last purchase: {account.lastMeal}</p>
                         </li>

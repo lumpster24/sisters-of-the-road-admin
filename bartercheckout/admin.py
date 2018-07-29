@@ -28,8 +28,9 @@ class BarterAccountAdmin(admin.ModelAdmin):
 	This is where you modify the view of a BarterAccount in the admin page.
 	"""
 	list_display = ['customer_name', 'account_balance']
-	fields = ['customer_name','balance','last_add','last_subtract']
-	readonly_fields = ['last_add','last_subtract']
+	# fields = ['customer_name','balance','last_add','last_subtract']
+	# readonly_fields = ['last_add','last_subtract']
+	fields = ['customer_name', 'balance']
 	
 admin.site.site_header = 'Sisters of the Road Cafe Admin'
 admin.site.index_title = 'Sisters of the Road Checkout Administration'
